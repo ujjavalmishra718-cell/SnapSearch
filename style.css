@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & RESET
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -9,19 +12,22 @@ body {
     margin: 0;
     font-family: sans-serif;
     width: 100%;
+    min-height: 100vh;      /* Changed from height to min-height to allow page growth */
+    display: flex;
+    flex-direction: column; 
 }
 
+/* ==========================================================================
+   2. HEADER / HERO SECTION (75% Screen Height)
+   ========================================================================== */
 .hero {
-    min-height: 100vh;
+    height: 75vh;           /* Takes up 75% of the viewport height */
     width: 100%;
-
     background:
         linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
         url('images/bg.jpg');
-
     background-size: cover;
     background-position: center;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,6 +48,7 @@ body {
     color: white;
 }
 
+/* --- Search Bar Container & Elements --- */
 form {
     width: 100%;
     max-width: 500px; 
@@ -73,11 +80,17 @@ header form .search-container .material-symbols-outlined {
     cursor: pointer;
 }
 
-/* Main & Content Layout */
+/* ==========================================================================
+   3. MAIN CONTENT SECTION (Takes remaining 25% or expands)
+   ========================================================================== */
 main {
+    flex: 1;                
+    min-height: 25vh;       /* Guarantees at least 25% height when empty */
     display: flex;
     justify-content: center;
+    align-items: flex-start; /* Aligns content to top so grid flows downwards nicely */
     width: 100%;
+    background-color: #fff;
 }
 
 main section {
@@ -87,11 +100,18 @@ main section {
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    margin: 20px 0 50px 0;
+    padding: 20px;          
 }
 
+/* --- Empty State Box --- */
+.empty-state {
+    text-align: center;     
+    margin-top: 40px;       /* Adds a clean space inside the 25% bottom area */
+}
+
+/* --- Image Grid & Wrapper Gallery --- */
 .images-container {
-    margin-block: 50px;
+    margin-block: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,6 +129,7 @@ main section {
     position: relative;
 }
 
+/* --- Image Hover Effects & Overlays --- */
 .images-container .overlay {
     position: absolute;
     right: 0;
@@ -137,6 +158,7 @@ main section {
     display: block;
 }
 
+/* --- Load More Button --- */
 .loadMoreBtn {
     border: none;
     background-color: #778899;
@@ -147,9 +169,12 @@ main section {
     border-radius: 8px;
     cursor: pointer;
     display: none;
+    margin-bottom: 40px;    /* Gives clean padding at the very bottom of the page */
 }
 
-/* Responsive Code */
+/* ==========================================================================
+   4. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
 @media screen and (max-width: 920px) {
     form {
         width: 90%;
