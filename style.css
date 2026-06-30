@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. GLOBAL STYLES & RESET
-   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,16 +10,14 @@ body {
     margin: 0;
     font-family: sans-serif;
     width: 100%;
-    min-height: 100vh;      /* Changed from height to min-height to allow page growth */
+    min-height: 100vh;      
     display: flex;
     flex-direction: column; 
 }
 
-/* ==========================================================================
-   2. HEADER / HERO SECTION (75% Screen Height)
-   ========================================================================== */
+/* header */
 .hero {
-    height: 75vh;           /* Takes up 75% of the viewport height */
+    height: 75vh;           
     width: 100%;
     background:
         linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
@@ -80,15 +76,13 @@ header form .search-container .material-symbols-outlined {
     cursor: pointer;
 }
 
-/* ==========================================================================
-   3. MAIN CONTENT SECTION (Takes remaining 25% or expands)
-   ========================================================================== */
+/* Main */
 main {
     flex: 1;                
-    min-height: 25vh;       /* Guarantees at least 25% height when empty */
+    min-height: 25vh;       
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Aligns content to top so grid flows downwards nicely */
+    align-items: flex-start; 
     width: 100%;
     background-color: #fff;
 }
@@ -106,7 +100,7 @@ main section {
 /* --- Empty State Box --- */
 .empty-state {
     text-align: center;     
-    margin-top: 40px;       /* Adds a clean space inside the 25% bottom area */
+    margin-top: 40px;       
 }
 
 /* --- Image Grid & Wrapper Gallery --- */
@@ -169,12 +163,10 @@ main section {
     border-radius: 8px;
     cursor: pointer;
     display: none;
-    margin-bottom: 40px;    /* Gives clean padding at the very bottom of the page */
+    margin-bottom: 40px;   
 }
 
-/* ==========================================================================
-   4. RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
+/*responsive media queris */
 @media screen and (max-width: 920px) {
     form {
         width: 90%;
