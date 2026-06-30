@@ -11,7 +11,6 @@ body {
     width: 100%;
 }
 
-/* Hero Section Base */
 .hero {
     min-height: 100vh;
     width: 100%;
@@ -23,19 +22,18 @@ body {
     background-size: cover;
     background-position: center;
 
-    /* This centers everything inside the hero vertically and horizontally */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Ensures text aligns beautifully in the middle */
+    text-align: center; 
     padding: 20px;
 }
 
 .hero h1 {
     font-size: 60px;
     margin-bottom: 10px;
-    color: white; /* Changed from #767676 so it pops on the wood background */
+    color: white; 
 }
 
 .hero p.tagline {
@@ -44,24 +42,23 @@ body {
     color: white;
 }
 
-/* Form & Search Container Box Centering */
 form {
     width: 100%;
-    max-width: 500px; /* Limits how wide the search bar gets */
+    max-width: 500px; 
     display: flex;
     justify-content: center;
 }
 
 header form .search-container {
     position: relative;
-    width: 100%; /* Forces container to use all available form width */
+    width: 100%; 
 }
 
 header form .search-container input {
     width: 100%;
     font-size: 18px;
-    padding: 15px 50px 15px 20px; /* Adjusted padding to make room for the icon */
-    border-radius: 30px; /* Clean rounded edges */
+    padding: 15px 50px 15px 20px; 
+    border-radius: 30px; 
     border: none;
     background: #eee;
     outline: none;
@@ -71,7 +68,7 @@ header form .search-container .material-symbols-outlined {
     position: absolute;
     right: 20px;
     top: 50%;
-    transform: translateY(-50%); /* Perfectly centers the glass icon vertically */
+    transform: translateY(-50%); 
     color: #777;
     cursor: pointer;
 }
